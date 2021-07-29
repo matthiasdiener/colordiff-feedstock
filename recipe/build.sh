@@ -4,4 +4,4 @@ set -xe
 
 sed -i.bak 's,/usr/bin/perl -w,/usr/bin/env -S perl -w,' colordiff.pl
 
-make INSTALL_DIR= DESTDIR=$PREFIX install
+make DESTDIR=$PREFIX INSTALL_DIR=/bin MAN_DIR=/man/man1 ETC_DIR=/etc install
